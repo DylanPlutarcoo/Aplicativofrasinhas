@@ -30,10 +30,11 @@ struct FraseView: View {
                 Spacer()
                 NavigationLink(destination: settingsView()){
                     Text("Configurações")
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.trailing)
-                }
-            
+                        .foregroundColor(.pink)
+                        
+                        
+                }.buttonStyle(buttonblu())
+                 .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                     
             }
