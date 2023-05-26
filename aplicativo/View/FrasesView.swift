@@ -15,26 +15,30 @@ struct FraseView: View {
         NavigationView {
             VStack{
                 Text("Bem vindo ao seu gerador de frases: ")
+               //     .textstyle(
+                    
                 Button("Gerar frase:") {
                     
                         text = viewmodel.gerarFrase()
                 }
                 .background(.yellow)
                 .cornerRadius(10)
-                .foregroundColor(.blue)
+               // .foregroundColor(.blue)
                 
                 Text("\(text)")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundColor(.pink)
                 
-                Spacer()
+                
                 NavigationLink(destination: settingsView()){
-                    Text("Configurações")
+                    Image(systemName: "folder.badge.gearshape")
                         .foregroundColor(.pink)
                         
                         
                 }.buttonStyle(buttonblu())
-                 .frame(maxWidth: .infinity, alignment: .trailing)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                    .padding(.top)
+                    
                 }
                     
             }

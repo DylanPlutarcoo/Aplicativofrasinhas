@@ -15,7 +15,11 @@ struct settingsView: View {
     var body: some View{
         VStack{
             TextField("Adicionar frase", text: $stringadicionar, prompt: Text("Digite"))
+                .frame(width: .infinity,alignment: .center)
+                .textFieldStyle(textfieldstyle())
             TextField("Remover frase", text: $stringremove, prompt: Text("Digite"))
+                .frame(width: .infinity, alignment: .center)
+                .textFieldStyle(textfieldstyle())
             
         }
     }
