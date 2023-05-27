@@ -8,19 +8,25 @@
 import SwiftUI
 
 
-
-class ViewModel {
+// state do observebleobject é published
+class ViewModel: ObservableObject {
     // protocolo é conjunto de regras que indica que quem assina o protocolo tem que implementar as regras
     static let fileManager = FileManager.default
     // static é pra acessar sem instanciar ("acesso global") n muda com instancia
-  static  var documentsDirectory: URL {
+    static  var documentsDirectory: URL {
         return ViewModel.fileManager.urls(for: .documentDirectory, in: .allDomainsMask).first!
     }
-   static var jsonURL: URL {
-       return ViewModel.documentsDirectory.appendingPathComponent("strings.json")
+    static var jsonURL: URL {
+        return ViewModel.documentsDirectory.appendingPathComponent("strings.json")
     }
     
-    var frases: [String] = ["d", "y", "l", "a", "n"]
+    var frases: [String] = ["d", "y", "l", "a", "n" ]
+    //struct frases: Identifiable{
+    // let id = UUID()
+    //
+    //
+//}
+    @Published var isVisible: Bool = true
     func decodar () {
         let decoder = JSONDecoder()
         do {
@@ -107,11 +113,23 @@ class ViewModel {
     }
 
 
-//    func listarFrase() {
-//        frases.forEach { item in
-//            return Text(item)
-//        }
-//    }
+    
+    func listarFrase() -> some View{
+      //  scrollview, lazyvgrid, identiable
+        let columns = [
+            GridItem()
+        ]
+       return ScrollView{
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(frases,id:\.self){frase in
+                    Text(frase)
+                }
+            
+                
+            }
+            
+        }
+    }
 
        
 

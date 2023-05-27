@@ -39,9 +39,11 @@ struct FraseView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                     .padding(.top)
                     
+               
+                }
                 }
                     
             }
         }
-    }
+    
 
