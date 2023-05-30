@@ -26,7 +26,7 @@ class ViewModel: ObservableObject {
     //
     //
 //}
-    @Published var isVisible: Bool = true
+    @Published var isVisible: Bool = f
     func decodar () {
         let decoder = JSONDecoder()
         do {
@@ -114,21 +114,21 @@ class ViewModel: ObservableObject {
 
 
     
-    func listarFrase() -> some View{
-      //  scrollview, lazyvgrid, identiable
-        let columns = [
-            GridItem()
-        ]
-       return ScrollView{
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(frases,id:\.self){frase in
-                    Text(frase)
-                }
-            
-                
-            }
-            
-        }
+//    func listarFrase() -> some View{
+//      //  scrollview, lazyvgrid, identiable
+//        let columns = [
+//            GridItem()
+//        ]
+//       return ScrollView{
+//            LazyVGrid(columns: columns, spacing: 20) {
+//                ForEach(frases,id:\.self){frase in
+//                    Text(frase)
+//                }
+//
+//
+//            }
+//
+        
     }
 
        

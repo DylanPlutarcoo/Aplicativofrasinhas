@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "40270D8A-38B9-405C-BF97-D93A209FFF65"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "aplicativo/View/FrasesView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B720075D-16E7-4684-8D70-1A290324D7E7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "aplicativo/View/FrasesView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "B720075D-16E7-4684-8D70-1A290324D7E7 - 62443496533ff86c"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.NavigationLink&lt;SwiftUI.Text, aplicativo.settingsView&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.NavigationLink&lt;SwiftUI.Text, aplicativo.settingsView&gt;)&gt;&gt; in aplicativo.FraseView.body.getter : some"
-                  moduleName = "aplicativo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/userext/Desktop/aplicativo/aplicativo/View/FrasesView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "2768">
-               </Location>
-               <Location
-                  uuid = "B720075D-16E7-4684-8D70-1A290324D7E7 - 3af12542a24acc21"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.NavigationLink&lt;SwiftUI.Text, aplicativo.settingsView&gt;)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.NavigationLink&lt;SwiftUI.Text, aplicativo.settingsView&gt;)&gt;&gt; in aplicativo.FraseView.body.getter : some"
-                  moduleName = "aplicativo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/userext/Desktop/aplicativo/aplicativo/View/FrasesView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A659A623-69D9-4C2B-954F-B8211AE694F8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -96,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "listarFrase()"
-            landmarkType = "7">
+            landmarkName = "ViewModel"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "47C34EDB-4D44-450F-BEE6-49406628DCCD - 31d5ba9f4264ca89"
@@ -144,8 +80,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
             endingLineNumber = "125"
-            landmarkName = "listarFrase()"
-            landmarkType = "7">
+            landmarkName = "ViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

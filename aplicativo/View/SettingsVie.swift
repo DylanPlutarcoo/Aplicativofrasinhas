@@ -21,29 +21,35 @@ struct settingsView: View {
     
     @State var stringadicionar: String = ""
     var body: some View{
-        VStack{
+        VStack(spacing: 10){
             Text("Digite frase para adiciona:")
             TextField("Adicionar frase", text: $stringadicionar, prompt: Text("Digite"))
-                .frame(width: 100,height: 40,alignment: .center)
-                .textFieldStyle(textfieldstyle())
-            Button("Clique para salva"){
+                .padding()
+                .frame(width: 300,height: 40,alignment: .center)
+                .cornerRadius(10)
+                .background(Color.black.opacity(0.10))
+             
+            Button("Clique para salvar"){
                 setmodel.salvar(frases: Phrase(frases: [stringadicionar]))
                 }
+            
                 .buttonStyle(buttonblu())
-                .frame(width: 70,height: 32, alignment: .center)
-            Text("Digite a frase para remove")
+                .frame(width: 200,height: 32, alignment: .center)
+            Text("Digite a frase para remove:")
             TextField("Remover frase", text: $stringremove, prompt: Text("Digite"))
-                .frame(width: 100,height:40,alignment: .center)
-                .textFieldStyle(textfieldstyle())
-            Button("Clique para salva"){
-                setmodel.salvar(frases: Phrase(frases: [stringremove]))
-            }
-
-                .buttonStyle(buttonblu())
-                .frame(width: .infinity,height: 32 ,alignment: .center)
+                .padding()
+                .frame(width: 300,height:40,alignment: .center)
+                .background(Color.black.opacity(0.10))
+                .cornerRadius(10)
+              
+            Button("Clique para remover:"){
+                setmodel.removerFrase(frasepararetirar: stringremove)
+            }   .buttonStyle(buttonblu())
+                .frame(width: 200,height: 32 ,alignment: .center)
+            
             Button("Clique para listar as frases:"){
                 setmodel.isVisible.toggle()
-            }
+            }.buttonStyle(buttonblu())
             if setmodel.isVisible {
                 ScrollView{
                     LazyVGrid(columns: columns, spacing: 20) {
