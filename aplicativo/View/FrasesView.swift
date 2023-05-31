@@ -13,44 +13,44 @@ struct FraseView: View {
     
     var body: some View{
         NavigationView {
-            VStack{
-                HStack{
-        
+            VStack {
+                HStack() {
+                    
                     NavigationLink(destination: settingsView()){
                         Image(systemName: "folder.badge.gearshape")
                             .foregroundColor(.pink)
-                            
-                            
+                        
+                        
                     }.buttonStyle(buttonblu())
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                         .padding(.top)
-                                            //     .textstyle(
-                }.frame(height: .infinity,alignment: .top)
+                    //     .textstyle(
+                }
                 
                 Text("Bem vindo ao seu gerador de frases: ")
                     .padding()
                     .font(.system(size: 20, design: .default))
                     .bold()
                     .foregroundColor(.pink)
-                    Spacer()
-                                
+                Spacer()
+                
                 Text("\(text)")
                     .font(.system(size: 35, weight: .semibold))
                     .foregroundColor(.pink)
                 
                 Button("Gerar frase:") {
-                        
-                        text = viewmodel.gerarFrase()
-                    }
-                    .frame(width: 170,height: 40)
-                    .background(.yellow)
-                    .cornerRadius(10)
-               
-               Spacer()
-                }
-        }.frame(height: .infinity)
                     
+                    text = viewmodel.gerarFrase()
+                }
+                .frame(width: 170,height: 40)
+                .background(.yellow)
+                .cornerRadius(10)
+                
+                Spacer()
+            }
+        }.frame(height: .infinity)
+        
     }
-        }
-    
+}
+
 

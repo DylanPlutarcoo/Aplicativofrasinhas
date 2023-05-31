@@ -26,7 +26,7 @@ class ViewModel: ObservableObject {
     //
     //
 //}
-    @Published var isVisible: Bool = f
+    @Published var isVisible: Bool = false
     func decodar () {
         let decoder = JSONDecoder()
         do {
@@ -58,35 +58,12 @@ class ViewModel: ObservableObject {
     func adicionarFrase(fraseparasalvar: String){
         // private func so existe dentro da func
         // public so oq view precisa ver
-        while option != "c" {
-            print("Digite 'a' para adicionar uma frase 'b' para salvar e 'c' para sair")
-            if let carat = readLine() {
-                option = carat
-            }
-            switch option.lowercased() {
-            case "a":
-                print("Escreva:")
-                   if let frasesNova = readLine(), !frasesNova.isEmpty {
-                    if frasesNova != ""{
-                        frasesNovas.append(frasesNova)
-
-                    }
-                    else {
-                        print( "Nenhuma frase foi digitada")
-                        break
-                    }
-                }
-            case "b":
-                frases.append(contentsOf: frasesNovas)
+        
+             
                 salvar(frases: Phrase(frases: frases))
-                print("A frases salvas")
-            case "c":
-                break
-            default:
-                print("opção incorreta")
-            }
+          
         }
-    }
+    
     
     func gerarFrase () -> String {
         guard let fraseAleatorio = frases.randomElement() else { return ""}
@@ -134,4 +111,4 @@ class ViewModel: ObservableObject {
        
 
     
-}
+
