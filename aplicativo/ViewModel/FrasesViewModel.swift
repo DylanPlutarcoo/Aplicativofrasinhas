@@ -25,7 +25,8 @@ class ViewModel: ObservableObject {
     // let id = UUID()
     //
     //
-//}
+    //}
+    
     @Published var isVisible: Bool = false
     func decodar () {
         let decoder = JSONDecoder()
@@ -33,17 +34,17 @@ class ViewModel: ObservableObject {
             
             let dado = try Data(contentsOf: ViewModel.jsonURL)
             let objectDecode = try decoder.decode(Phrase.self, from: dado)
-                frases = objectDecode.frases
+            frases = objectDecode.frases
         } catch{
             print("Não deu")
         }
     }
     //encode
     var fraseescrita = ""
-
+    
     //var frasenew = Phrase(frase: [frasesNovas])
     func salvar(frases: Phrase) {
-
+        
         let encoder = JSONEncoder()
         do {
             let frasenewJSONData = try encoder.encode(frases)
@@ -58,57 +59,72 @@ class ViewModel: ObservableObject {
     func adicionarFrase(fraseparasalvar: String){
         // private func so existe dentro da func
         // public so oq view precisa ver
+        isAparece = true
         
-             
-                salvar(frases: Phrase(frases: frases))
-          
-        }
+        salvar(frases: Phrase(frases: frases))
+        
+    }
     
     
     func gerarFrase () -> String {
         guard let fraseAleatorio = frases.randomElement() else { return ""}
         return fraseAleatorio
     }
-
+    
     var fraseRetirar: String = ""
     
-    func removerFrase(frasepararetirar: String){
-            let frasetirar = frasepararetirar
+       
+    
+        @Published var isOk: Bool = false
+        @Published var isUnused: Bool = false
+    @Published var isAparece: Bool = false
         
+            
+    
+    func removerFrase(frasepararetirar: String) {
+            let frasetirar = frasepararetirar
+            
             if frases.contains(frasetirar) {
                 fraseRetirar = frasetirar
                 guard let index = frases.firstIndex(of: "\(fraseRetirar)")
-                else { return }
+                else {
+                    
+                    return
+                }
                 // thorw trata erros de maneira "sofisticada" tipo com enumns
-               var indexRetirar = index
+                var indexRetirar = index
                 frases.remove(at: indexRetirar)
-
+                
+               salvar(frases: Phrase(frases: frases))
+                isOk = true
+                isUnused = false
+            }else {
+               isOk = false
+                isUnused = true
             }
             
-        salvar(frases: Phrase(frases: frases))
-
-    }
-
-
-    
-//    func listarFrase() -> some View{
-//      //  scrollview, lazyvgrid, identiable
-//        let columns = [
-//            GridItem()
-//        ]
-//       return ScrollView{
-//            LazyVGrid(columns: columns, spacing: 20) {
-//                ForEach(frases,id:\.self){frase in
-//                    Text(frase)
-//                }
-//
-//
-//            }
-//
+            
+        }
         
-    }
-
-       
-
+        
+    //    func listarFrase() -> some View{
+    //      //  scrollview, lazyvgrid, identiable
+    //        let columns = [
+    //            GridItem()
+    //        ]
+    //       return ScrollView{
+    //            LazyVGrid(columns: columns, spacing: 20) {
+    //                ForEach(frases,id:\.self){frase in
+    //                    Text(frase)
+    //                }
+    //
+    //
+    //            }
+    //
     
+}
+
+
+
+
 

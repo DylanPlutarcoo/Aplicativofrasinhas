@@ -19,6 +19,7 @@
 		649DCD1B2A16F93C00758751 /* aplicativoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DCD1A2A16F93C00758751 /* aplicativoUITests.swift */; };
 		649DCD1D2A16F93C00758751 /* aplicativoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DCD1C2A16F93C00758751 /* aplicativoUITestsLaunchTests.swift */; };
 		64A12BB02A200F83003C8F53 /* textfieldstyl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A12BAF2A200F83003C8F53 /* textfieldstyl.swift */; };
+		64B876E92A29268C0034E479 /* alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B876E82A29268C0034E479 /* alert.swift */; };
 		64BA1EFD2A2019BF00F48C33 /* textconfi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BA1EFC2A2019BF00F48C33 /* textconfi.swift */; };
 		64BA1EFF2A201C0B00F48C33 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BA1EFE2A201C0B00F48C33 /* Model.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		649DCD1A2A16F93C00758751 /* aplicativoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aplicativoUITests.swift; sourceTree = "<group>"; };
 		649DCD1C2A16F93C00758751 /* aplicativoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aplicativoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		64A12BAF2A200F83003C8F53 /* textfieldstyl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldstyl.swift; sourceTree = "<group>"; };
+		64B876E82A29268C0034E479 /* alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert.swift; sourceTree = "<group>"; };
 		64BA1EFC2A2019BF00F48C33 /* textconfi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textconfi.swift; sourceTree = "<group>"; };
 		64BA1EFE2A201C0B00F48C33 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 				64999CC72A1EE2040092046F /* buttonstyle.swift */,
 				64A12BAF2A200F83003C8F53 /* textfieldstyl.swift */,
 				64BA1EFC2A2019BF00F48C33 /* textconfi.swift */,
+				64B876E82A29268C0034E479 /* alert.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				649DCD002A16F93800758751 /* aplicativoApp.swift in Sources */,
 				64A12BB02A200F83003C8F53 /* textfieldstyl.swift in Sources */,
 				64BA1EFD2A2019BF00F48C33 /* textconfi.swift in Sources */,
+				64B876E92A29268C0034E479 /* alert.swift in Sources */,
 				64999CBB2A1E8A6B0092046F /* FrasesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

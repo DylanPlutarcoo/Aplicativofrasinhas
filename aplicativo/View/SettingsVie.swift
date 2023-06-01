@@ -21,6 +21,7 @@ struct settingsView: View {
     
     @State var stringadicionar: String = ""
     var body: some View{
+        
         VStack(spacing: 10){
             Text("Digite frase para adiciona:")
             TextField("Adicionar frase", text: $stringadicionar, prompt: Text("Digite"))
@@ -30,11 +31,13 @@ struct settingsView: View {
                 .background(Color.black.opacity(0.10))
              
             Button("Clique para salvar"){
-                setmodel.salvar(frases: Phrase(frases: [stringadicionar]))
-                }
-            
-                .buttonStyle(buttonblu())
+                setmodel.adicionarFrase(fraseparasalvar: stringadicionar)
+                
+            }   .buttonStyle(buttonblu())
                 .frame(width: 200,height: 32, alignment: .center)
+                .alert("Frase foi adicionada", isPresented: $setmodel.isAparece, actions: {}) {
+                    
+                }
             Text("Digite a frase para remove:")
             TextField("Remover frase", text: $stringremove, prompt: Text("Digite"))
                 .padding()
@@ -46,6 +49,14 @@ struct settingsView: View {
                 setmodel.removerFrase(frasepararetirar: stringremove)
             }   .buttonStyle(buttonblu())
                 .frame(width: 200,height: 32 ,alignment: .center)
+                .alert("Deu errado",isPresented: $setmodel.isUnused,actions: {}){
+                }
+                .alert("Deu certo", isPresented: $setmodel.isOk, actions: {}){
+                    
+                }
+            
+            
+            }
             
             Button("Clique para listar as frases:"){
                 setmodel.isVisible.toggle()
@@ -62,6 +73,10 @@ struct settingsView: View {
                     
                 }
             }
+         
+                
+                
+            
         }
     }
-}
+

@@ -48,7 +48,7 @@ struct FraseView: View {
                 
                 Spacer()
             }
-        }.frame(height: .infinity)
+        }
         
     }
 }
