@@ -1,13 +1,13 @@
 //
-//  buttonstyle.swift
-//  aplicativo
+//  ButtonBlue.swift
+//  TestFix
 //
-//  Created by userext on 24/05/23.
+//  Created by userext on 05/06/23.
 //
 
 import SwiftUI
 
-struct buttonblu: ButtonStyle {
+struct ButtonBlue: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()

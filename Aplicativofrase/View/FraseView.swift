@@ -16,12 +16,12 @@ struct FraseView: View {
             VStack {
                 HStack() {
                     
-                    NavigationLink(destination: settingsView()){
+                    NavigationLink(destination: SettingsView()){
                         Image(systemName: "folder.badge.gearshape")
                             .foregroundColor(.pink)
                         
                         
-                    }.buttonStyle(buttonblu())
+                    }.buttonStyle(ButtonBlue())
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                         .padding(.top)
                     //     .textstyle(
@@ -52,5 +52,9 @@ struct FraseView: View {
         
     }
 }
-
+struct FraseView_Previews: PreviewProvider{
+    static var previews: some View {
+        FraseView()
+    }
+}
 
