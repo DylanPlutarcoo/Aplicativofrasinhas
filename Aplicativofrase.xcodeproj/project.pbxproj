@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644535902A310161003675DD /* VerFrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6445358F2A310161003675DD /* VerFrases.swift */; };
 		64D959C12A2FDBAF0067F38C /* TestFixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D959B12A2FDBAF0067F38C /* TestFixApp.swift */; };
 		64D959C22A2FDBAF0067F38C /* Phrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D959B42A2FDBAF0067F38C /* Phrase.swift */; };
 		64D959C32A2FDBAF0067F38C /* PhraseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D959B52A2FDBAF0067F38C /* PhraseViewModel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6445358F2A310161003675DD /* VerFrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerFrases.swift; sourceTree = "<group>"; };
 		64C512822A2EA64D00990A52 /* Aplicativofrase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aplicativofrase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D959B12A2FDBAF0067F38C /* TestFixApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFixApp.swift; sourceTree = "<group>"; };
 		64D959B42A2FDBAF0067F38C /* Phrase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phrase.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				64D959BE2A2FDBAF0067F38C /* SettingsView.swift */,
 				64D959BF2A2FDBAF0067F38C /* FraseView.swift */,
 				64D959C02A2FDBAF0067F38C /* ContentView.swift */,
+				6445358F2A310161003675DD /* VerFrases.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				64D959CA2A2FDBAF0067F38C /* ContentView.swift in Sources */,
 				64D959C52A2FDBAF0067F38C /* CustomTextFieldStyle.swift in Sources */,
 				64D959C92A2FDBAF0067F38C /* FraseView.swift in Sources */,
+				644535902A310161003675DD /* VerFrases.swift in Sources */,
 				64D959C82A2FDBAF0067F38C /* SettingsView.swift in Sources */,
 				64D959C12A2FDBAF0067F38C /* TestFixApp.swift in Sources */,
 				64D959C62A2FDBAF0067F38C /* ButtonBlue.swift in Sources */,

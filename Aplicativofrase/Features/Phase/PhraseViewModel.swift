@@ -12,11 +12,12 @@ import SwiftUI
 class ViewModel: ObservableObject {
     // protocolo é conjunto de regras que indica que quem assina o protocolo tem que implementar as regras
     static let fileManager = FileManager.default
-
+    
+    @Published var sheetview: Bool = false
     @Published var isOk: Bool = false
     @Published var isUnused: Bool = false
     @Published var isAparece: Bool = false
-    @Published var isVisible: Bool = false
+    @Published var isVisible: Bool = true
 
     var fraseescrita = ""
     var fraseRetirar: String = ""
