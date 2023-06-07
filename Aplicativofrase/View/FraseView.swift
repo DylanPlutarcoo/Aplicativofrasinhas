@@ -8,35 +8,37 @@
 import SwiftUI
 
 struct FraseView: View {
-    let viewmodel = ViewModel()
-    @State var text: String = ""
-    
     var body: some View{
         NavigationView {
             VStack {
-                HStack() {
-                    
-                    NavigationLink(destination: SettingsView()){
-                        Image(systemName: "folder.badge.gearshape")
-                            .foregroundColor(.pink)
-                        
-                        
-                    }.buttonStyle(ButtonBlue())
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                        .padding(.top)
-                    //     .textstyle(
+                TabView{
+                    FraseViewMenu()
+                        .tabItem {
+                            Label("Home",systemImage: "house")
+                        }
+                    SettingsView()
+                        .tabItem{
+                            Label("Settings",systemImage: "gearshape")
+                                    
+                                        
+                                }
+                        }
                 }
-                
-                Text("Bem vindo ao seu gerador de frases: ")
+            }
+        }
+    }
+
+    struct FraseViewMenu: View {
+        let viewmodel = ViewModel()
+        @State var text: String = ""
+        var body: some View{
+            VStack{
+                Text("Bem vindo ao seu gerador de frases")
                     .padding()
                     .font(.system(size: 20, design: .default))
                     .bold()
                     .foregroundColor(.pink)
                 Spacer()
-                
-                Text("\(text)")
-                    .font(.system(size: 35, weight: .semibold))
-                    .foregroundColor(.pink)
                 
                 Button("Gerar frase:") {
                     
@@ -45,16 +47,20 @@ struct FraseView: View {
                 .frame(width: 170,height: 40)
                 .background(.yellow)
                 .cornerRadius(10)
-                
+                Text("\(text)")
+                    .font(.system(size: 35, weight: .semibold))
+                    .foregroundColor(.pink)
                 Spacer()
+                
             }
         }
-        
     }
-}
-struct FraseView_Previews: PreviewProvider{
-    static var previews: some View {
-        FraseView()
+
+
+    struct FraseView_Previews: PreviewProvider{
+        static var previews: some View {
+            FraseView()
+        }
     }
-}
+    
 

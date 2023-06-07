@@ -11,7 +11,7 @@ import SwiftUI
 struct TestFixApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FraseView()
         }
     }
 }
